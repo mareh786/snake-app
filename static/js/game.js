@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let foodMoveCounter = 0; // Counter for smooth movement
     let direction = 'right';
     let gameSpeed = 160; // milliseconds
+    const DEFAULT_GAME_SPEED = 160; // Default speed value
     let gameInterval;
     let foodMoveInterval;
     let score = 0;
@@ -52,6 +53,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // Reset score
         score = 0;
         scoreElement.textContent = score;
+        
+        // Reset speed to default
+        gameSpeed = DEFAULT_GAME_SPEED;
         
         // Reset speed display
         updateSpeedStatus();
@@ -391,7 +395,8 @@ document.addEventListener('DOMContentLoaded', () => {
             startBtn.textContent = 'Resume Game';
         } else {
             // Start or resume game
-            if (snake.length === 0) {
+            if (snake.length === 0 || startBtn.textContent === 'Start Game') {
+                // Reset and start new game
                 initGame();
             }
             gameInterval = setInterval(gameLoop, gameSpeed);
