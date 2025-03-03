@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.game-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.speed {
+    color: #e67e22;
+}
+
+canvas {
+    border: 2px solid #333;
+    background-color: #222;
+    margin-bottom: 15px;
+}
+
+.controls {
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#resetBtn {
+    background-color: #f44336;
+}
+
+#resetBtn:hover {
+    background-color: #d32f2f;
+}
+
+.difficulty-selector {
+    margin: 15px 0;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.difficulty-selector label {
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.difficulty-selector input[type="radio"] {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.difficulty-info {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #e74c3c;
+    font-style: italic;
+}
+
+.instructions {
+    text-align: left;
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+}
+
+.instructions h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.instructions p {
+    margin-bottom: 5px;
+    color: #555;
+}
